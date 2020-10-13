@@ -1,68 +1,47 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Integration testing exercises
 
-## Available Scripts
+## Application under test
 
-In the project directory, you can run:
+Personal blogging web application generated with [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html).
 
-### `npm start`
+### User stories
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **As a** blog site visitor **I can** look around the blog site using navigation menu **in order to** get acquainted with the content.
+- **As a** blog site visitor **I can** open certain article displayed on the articles page **in order to** read that article.
+- **As a** blog site owner **I want to** display page not found message to the user **in order to** let the user know when user stumbled upon an article that does not exist.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Exercises
+- [ ] Get to know the application
+- [ ] Testing React components
+- [ ] Writing mock integration tests against our back-end
+- [ ] Creating a CI pipeline
 
-### `npm test`
+## Exercise 1: Get to know the application
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Prerequisites:**
+- NodeJS and NPM
 
-### `npm run build`
+Setup the application locally and get acquainted with the application, and it's code:
+- Checkout the repo from Gitlab (and push it where ever you prefer)
+- Install node modules: ```npm install```
+- Run the application in DEV mode: ```npm start```
+- Familiarise yourself with the application
+- Familiarise yourself with React code. Try to understand how it works and/or checkout some tutorials on youtube (**Keywords:** *React*, *React Router*, *create-react-app*)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Exercise 2: Testing React components with Jest
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Testing navigation between different components:
+- NavBar and other pages
+- ArticlesList and ArticlePage
+- Page not found and other pages (TDD)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Exercise 3: Writing mock integration tests against our back-end with Cypress
 
-### `npm run eject`
+We will be writing TDD integration tests against the back-end application by  
+replacing dummy data (```article-content.js```) with API calls to the back-end  
+that is still being developed.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Exercise 4: Creating a CI pipeline in Gitlab for the front-end application
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+We will be creating a basic Gitlab CI pipeline for our front-end which will be  
+checking the code we commit to the master branch.
