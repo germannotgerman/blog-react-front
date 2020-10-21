@@ -6,6 +6,7 @@ import ArticlePage from "./pages/ArticlePage";
 import ArticlesListPage from "./pages/ArticlesListPage";
 import NavBar from "./components/NavBar";
 import './App.css';
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                         <Route path="/about" component={AboutPage}/>
                         <Route path="/articles-list" component={ArticlesListPage}/>
                         <Route path="/article/:name" component={ArticlePage}/>
+                        <Route component={PageNotFound} />
                     </Switch>
                 </div>
             </div>

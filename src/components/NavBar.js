@@ -4,13 +4,13 @@ const NavBar = () => (
     <nav>
         <ul>
             <li>
-                <Link to="/">Home</Link>
+                <Link className={"navitem-home"} to="/">Home</Link>
             </li>
             <li>
-                <Link to="/about">About</Link>
+                <Link className={"navitem-about"}to="/about">About</Link>
             </li>
             <li>
-                <Link to="/articles-list">Articles</Link>
+                <Link className={"navitem-articles"}to="/articles-list">Articles</Link>
             </li>
         </ul>
     </nav>
