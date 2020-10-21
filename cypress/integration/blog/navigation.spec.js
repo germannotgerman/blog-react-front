@@ -32,7 +32,7 @@ context("Navigation", () => {
 
     it("should display page not found for page that does not exist", () => {
         cy.visit("http://localhost:3000/hodor");
-        cy.get("h1").should("have.text", "500: Page not found");
+        cy.get("h1").should("have.text", "404: Page not found");
     })
 
 })
