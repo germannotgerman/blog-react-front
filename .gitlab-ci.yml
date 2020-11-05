@@ -1,9 +1,0 @@
-stages:
-  - test
-
-cypress-e2e:
-  image: cypress/base:10
-  stage: test
-  script:
-    - npm ci
-    - npm test

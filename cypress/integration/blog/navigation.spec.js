@@ -35,4 +35,13 @@ context("Navigation", () => {
         cy.get("h1").should("have.text", "404: Page not found");
     })
 
+    context("TalTech Search", () => {
+        it("should search for person by firstname", () => {
+            cy.visit("/");
+            cy.get(".main-container .top-search .form-control").type("German{enter}");
+            cy.get('.t-icon__plus-minus').click();
+            cy.get(".contacts__expand .contacts__listing > li:nth-child(1)").should("have.text", "külalisõppehobujõud");
+        })
+    })
+
 })
